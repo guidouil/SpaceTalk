@@ -6,7 +6,7 @@ LeftSidebar = BlazeComponent.extendComponent({
   channels: function () {
     return Channels.find();
   },
-  currentUseravatar: function () {
+  currentUserAvatar: function () {
     var user = Meteor.user();
     if (user && user.emails) {
       return Gravatar.imageUrl(user.emails[0].address);
@@ -16,4 +16,4 @@ LeftSidebar = BlazeComponent.extendComponent({
     var _id = currentRouteId();
     return _id == this.currentData()._id ? 'active' : '';
   },
-}).register('LeftSidebar');
+}).register('leftSidebar');
